@@ -28,7 +28,7 @@ const verifyToken = (req, res, next) => {
 
 
 const verifyAdmin = (req, res, next) => {
-    if (!req.user.is_admin) return res.status(403).json({ error: 'Admin access required, Contact admin' });
+    if (!req.user.is_admin) return res.status(403).json({ error: 'Admin access required' });
     next();
 };
 
